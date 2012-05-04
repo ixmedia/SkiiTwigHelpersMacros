@@ -14,15 +14,15 @@ Be sure to have it loaded in your Symfony `App/AppKernel.php` file like this:
 
 	class AppKernel extends Kernel
 	{
-			public function registerBundles()
-			{
-					$bundles = array(
-							…
-							new Skii\Bundle\TwigHelpersMacrosBundle\SkiiTwigHelpersMacrosBundle(),
-					);
-				return $bundles;
-			}
-			…
+		public function registerBundles()
+		{
+			$bundles = array(
+				…
+				new Skii\Bundle\TwigHelpersMacrosBundle\SkiiTwigHelpersMacrosBundle(),
+			);
+			return $bundles;
+		}
+		…
 	}
 
 ## Usage
