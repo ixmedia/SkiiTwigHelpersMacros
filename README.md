@@ -7,8 +7,8 @@ List of useful [Twig](http://twig.sensiolabs.org) [Macros](http://twig.sensiolab
 To use with [Symfony](http://symfony.com) 2.0.x add this in your `deps` file:
 
 	[SkiiTwigHelpersMacros]
-		git=git@github.com:ixmedia/SkiiTwigHelpersMacros.git
-		target=/bundles/Skii/Bundle/TwigHelpersMacrosBundle
+		git=http://github.com/ixmedia/SkiiTwigHelpersMacros.git
+		target=bundles/Skii/Bundle/TwigHelpersMacrosBundle
 
 Be sure to have it loaded in your Symfony `App/AppKernel.php` file like this:
 
