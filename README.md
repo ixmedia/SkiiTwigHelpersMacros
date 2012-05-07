@@ -44,4 +44,5 @@ Will output something like that:
 [![Follow iXmedia](http://f.cl.ly/items/3O3k2c1a393a0d3E2U0U/follow-ixmedia.png)](https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fplatform.twitter.com%2Fwidgets%2Ffollow_button.1335513764.html&region=follow_link&screen_name=iXmedia&source=followbutton&variant=2.0)
 
 ## License
-SkiiTwigHelpersMacros is licensed under the [MIT license](https://github.com/ixmedia/SkiiTwigHelpersMacros/blob/master/LICENSE).
+
+© 2012 [iXmédia](http://www.ixmedia.com) and licensed under the [MIT license](https://github.com/ixmedia/SkiiTwigHelpersMacros/blob/master/LICENSE).
