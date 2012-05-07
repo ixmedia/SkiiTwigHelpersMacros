@@ -2,16 +2,8 @@
    Reference: https://developers.facebook.com/docs/plugins/
 #}
 {% macro fb_init(app_id,locale) %}
-    {% spaceless %}
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/{{ locale|default('en_US') }}/all.js#xfbml=1&appId={{ app_id }}";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-    {% endspaceless %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/{{ locale|default('en_US') }}/all.js#xfbml=1&appId={{ app_id }}"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
 {% endmacro %}
 
 {# Facebook Like Button
@@ -51,33 +43,33 @@
    Reference: http://twitter.com/about/resources/widgets/widget_profile
 #}
 {% macro tw_feed(username,width,height,shell_background,shell_color,tweets_background,tweets_color,tweets_links,tweets_number,scrollbar,loop,live,behavior,tweet_interval) %}
-    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
     <script>
-    new TWTR.Widget({
-      version: 2,
-      type: 'profile',
-      rpp: {{ tweets_number|default('4') }},
-      interval: {{ tweet_interval|default('30000') }},
-      width: {{ width }},
-      height: {{ height }},
-      theme: {
-        shell: {
-          background: '{{ shell_background }}',
-          color: '{{ shell_color }}'
+        new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: {{ tweets_number|default('4') }},
+        interval: {{ tweet_interval|default('30000') }},
+        width: {{ width }},
+        height: {{ height }},
+        theme: {
+            shell: {
+                background: '{{ shell_background }}',
+                color: '{{ shell_color }}'
+            },
+            tweets: {
+                background: '{{ tweets_background }}',
+                color: '{{ tweets_color }}',
+                links: '{{ tweets_links }}'
+            }
         },
-        tweets: {
-          background: '{{ tweets_background }}',
-          color: '{{ tweets_color }}',
-          links: '{{ tweets_links }}'
+        features: {
+            scrollbar: {{ scrollbar|default('true') }},
+            loop: {{ loop|default('false') }},
+            live: {{ live|default('true') }},
+            behavior: '{{ behavior|default('all') }}'
         }
-      },
-      features: {
-        scrollbar: {{ scrollbar|default('true') }},
-        loop: {{ loop|default('false') }},
-        live: {{ live|default('true') }},
-        behavior: '{{ behavior|default('all') }}'
-      }
-    }).render().setUser('{{ username }}').start();
+        }).render().setUser('{{ username }}').start();
     </script>
 {% endmacro %}
 
@@ -87,15 +79,7 @@
    Reference: http://www.google.com/webmasters/+1/button/
 #}
 {% macro gplusone_init(lang) %}
-<script type="text/javascript">
-  window.___gcfg = {lang: '{{ lang|default('en') }}'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
+    <script>window.___gcfg = {lang: '{{ lang|default('en') }}'}; (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
 {% endmacro %}
 
 {# Google +1 Button
