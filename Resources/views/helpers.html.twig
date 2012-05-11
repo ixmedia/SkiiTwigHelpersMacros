@@ -17,7 +17,7 @@
    Reference: https://developers.facebook.com/docs/reference/plugins/like-box/
 #}
 {% macro fb_like_box(url,width,show_face,show_stream,show_header,border_color) %}
-    <div class="fb-like-box" data-href="{{ url }}" data-width="{{ width|default('292') }}" data-show-faces="{{ show_face|default('false') }}" data-stream="{{ show_stream|default('true') }}" data-header="{{ show_header|default('false') }}" data-border-color="{{ border_color|default('AAAAAA') }}"></div>
+    <div class="fb-like-box" data-href="{{ url }}" data-width="{{ width|default('292') }}" data-show-faces="{{ show_face|default('false') }}" data-stream="{{ show_stream|default('true') }}" data-header="{{ show_header|default('false') }}" data-border-color="{{ border_color|default('#AAAAAA') }}"></div>
 {% endmacro %}
 
 
