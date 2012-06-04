@@ -20,6 +20,13 @@
     <div class="fb-like-box" data-href="{{ url }}" data-width="{{ width|default('292') }}" data-show-faces="{{ show_face|default('false') }}" data-stream="{{ show_stream|default('true') }}" data-header="{{ show_header|default('false') }}" data-border-color="{{ border_color|default('#AAAAAA') }}"></div>
 {% endmacro %}
 
+{# Facebook Comment Box
+   Reference: https://developers.facebook.com/docs/reference/plugins/comments/
+#}
+{% macro fb_comment_box(url,num_posts,width,colorscheme) %}
+    <div class="fb-comments" data-href="{{ url|default('') }}" data-num-posts="{{ num_posts|default('2') }}" data-width="{{ width|default('470') }}" data-colorscheme="{{ colorscheme|default('light') }}"></div>
+{% endmacro %}
+
 
 
 {# Twitter Follow Button
@@ -104,3 +111,4 @@
 {% macro gauges_tracking(tracking_code) %}
     <script>var _gauges = _gauges || []; (function() { var t   = document.createElement('script'); t.type  = 'text/javascript'; t.async = true; t.id = 'gauges-tracker'; t.setAttribute('data-site-id', '{{ tracking_code }}'); t.src = '//secure.gaug.es/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s); })();</script>
 {% endmacro %}
+
