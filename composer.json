@@ -1,0 +1,23 @@
+{
+    "name": "ixmedia/SkiiTwigHelpersMacros",
+    "type": "library",
+    "description": "A growing list of usefull Twig Macros helpers",
+    "keywords": [
+        "php",
+        "twig",
+        "helpers"
+    ],
+    "homepage": "http://ixmedia.github.com/SkiiTwigHelpersMacros/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jean-Philippe Sirois",
+            "email": "email@jpsirois.com",
+            "homepage": "http://jpsirois.com",
+            "role": "Web Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    }
+}
