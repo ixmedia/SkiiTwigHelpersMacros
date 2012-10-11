@@ -1,5 +1,5 @@
 {
-    "name": "ixmedia/SkiiTwigHelpersMacros",
+    "name": "skii/SkiiTwigHelpersMacros",
     "type": "library",
     "description": "A growing list of usefull Twig Macros helpers",
     "keywords": [
