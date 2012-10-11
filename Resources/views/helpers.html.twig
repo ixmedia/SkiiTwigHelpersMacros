@@ -30,7 +30,7 @@
 
 
 {# Twitter Follow Button
-   Réference: https://twitter.com/about/resources/buttons#follow
+   Reference: https://twitter.com/about/resources/buttons#follow
 #}
 {% macro tw_follow_btn(username,lang,show_count) %}
     <a href="https://twitter.com/{{ username }}" class="twitter-follow-button" data-show-count="{{ show_count|default('false') }}" data-lang="{{ lang|default('en') }}">Follow @{{ username }}</a>
